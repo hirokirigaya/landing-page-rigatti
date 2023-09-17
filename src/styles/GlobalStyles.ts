@@ -29,6 +29,7 @@ const GlobalStyles = styled.createGlobalStyle`
 
   body {
     background: ${({ theme }) => theme.colors.background.primary};
+    overflow-x: hidden;
   }
 
   button {

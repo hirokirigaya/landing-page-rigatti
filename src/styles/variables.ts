@@ -17,6 +17,7 @@ const theme = {
       tertiary: '#ffffff',
     },
     green: {
+      50: '#E3F4DE',
       500: '#2BB12B',
     },
     pastelGreen: {
@@ -26,6 +27,9 @@ const theme = {
       50: '#707070',
       100: '#666666',
       200: '#555555',
+    },
+    blue: {
+      50: '#DEE9F4'
     },
     darkGray: {
       500: '#202020',
@@ -39,6 +43,7 @@ const theme = {
       500: '#6E7C8B',
     },
     purple: {
+      50: '#EBE8F4',
       500: '#69516E',
     },
   },
@@ -80,7 +85,12 @@ const theme = {
     '3xl': '28px',
     '4xl': '36px',
     '5xl': '48px',
-    '6xl': '64px',
+    '6xl': '70px',
+  },
+  fontFamily: {
+    poppins: 'var(--font-poppins), Arial, sans-serif',
+    playfair: 'var(--font-playfair), Arial, sans-serif',
+    montserrat: 'var(--font-montserrat), Arial, sans-serif',
   },
   buttons: {
     primary: {
@@ -88,7 +98,7 @@ const theme = {
       color: '#fff',
       transition: 'all 0.2s ease-in-out',
       '&:hover': {
-        filter: 'brightness(.9)',
+        filter: 'brightness(1.1)',
       },
     },
     secondary: {
@@ -96,7 +106,7 @@ const theme = {
       color: '#C3B48B',
       transition: 'all 0.2s ease-in-out',
       '&:hover': {
-        filter: 'brightness(.9)',
+        filter: 'brightness(1.1)',
       },
     },
   },

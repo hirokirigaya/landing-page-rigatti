@@ -27,25 +27,8 @@ const Footer = (): JSX.Element => {
         >
           (47) 99981-7131
         </Styled.LinkContact>
-        <Typography
-          fontWeight={300}
-          lineHeight={'26px'}
-          color={'tertiary'}
-          textAlign={'center'}
-          paddingTop={'2px'}
-          fontSize={'16px'}
-        >
-          Rua 2950, 117 - Centro - Balneário Camboriú - SC
-        </Typography>
-        <Typography
-          fontWeight={500}
-          lineHeight={'26px'}
-          color={'tertiary'}
-          textAlign={'center'}
-          fontSize={'13px'}
-        >
-          Segunda à Sexta-feira das 9h às 19h.
-        </Typography>
+        <Styled.Address>Rua 2950, 117 - Centro - Balneário Camboriú - SC</Styled.Address>
+        <Styled.HoursOpen>Segunda à Sexta-feira das 9h às 19h.</Styled.HoursOpen>
       </Styled.BoxContacts>
     </Styled.Footer>
   );

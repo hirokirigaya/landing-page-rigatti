@@ -1,4 +1,4 @@
-import type { Metadata, MetadataRoute } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Clínica Rigatti',

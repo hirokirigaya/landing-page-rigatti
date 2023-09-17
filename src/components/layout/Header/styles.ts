@@ -10,6 +10,7 @@ export const Header = styled.header`
   width: 100%;
   position: relative;
   gap: 1rem;
+  z-index: 999;
 
   @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
     flex-direction: row;
@@ -149,7 +150,7 @@ export const BoxLocale = styled.div`
 `;
 
 export const TitleHours = styled.p`
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: ${({ theme }) => theme.fontFamily.montserrat};
   font-size: ${({ theme }) => theme.fontSizes.sm};
   color: ${({ theme }) => theme.colors.text.quaternary};
   font-weight: 700;
@@ -157,7 +158,7 @@ export const TitleHours = styled.p`
 `;
 
 export const Locale = styled.p`
-  font-family: var(--font-montserrat), sans-serif;
+  font-family:  ${({ theme }) => theme.fontFamily.montserrat};
   font-size: ${({ theme }) => theme.fontSizes.sm};
   color: ${({ theme }) => theme.colors.text.quaternary};
   font-style: italic;
@@ -185,7 +186,7 @@ export const IconWhatsapp = styled.img`
 `;
 
 export const TextWhatsapp = styled.p`
-  font-family: var(--font-montserrat), sans-serif;
+  font-family:  ${({ theme }) => theme.fontFamily.montserrat};
   font-size: ${({ theme }) => theme.fontSizes.xl};
   color: ${({ theme }) => theme.colors.text.quaternary};
   font-weight: 700;

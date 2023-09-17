@@ -1,3 +1,4 @@
+import { Typography } from '@/components/reusables/Typography/Typography';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -39,4 +40,21 @@ export const LinkContact = styled.a`
   line-height: 26px;
   font-weight: 500;
   text-align: center;
+`;
+
+export const Address = styled.p`
+  font-weight: 300;
+  line-height: 26px;
+  color: ${({ theme }) => theme.colors.text.tertiary};
+  text-align: center;
+  font-size: ${({ theme }) => theme.fontSizes.md};
+  padding-top: 2px;
+`;
+
+export const HoursOpen = styled.p`
+  font-weight: 500;
+  line-height: 26px;
+  color: ${({ theme }) => theme.colors.text.tertiary};
+  text-align: center;
+  font-size: ${({ theme }) => theme.customFontSizes.xs};
 `;

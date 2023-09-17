@@ -3,15 +3,19 @@
 import StyledComponentsRegistry from '@/lib/registry';
 import GlobalStyles from '@/styles/GlobalStyles';
 import { theme } from '@/styles/variables';
-import { ThemeProvider } from 'styled-components';
+import { StyleSheetManager, ThemeProvider } from 'styled-components';
+
+import isPropValid from '@emotion/is-prop-valid';
 
 const Providers = (props: React.PropsWithChildren) => {
   return (
     <StyledComponentsRegistry>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        {props.children}
-      </ThemeProvider>
+      <StyleSheetManager shouldForwardProp={isPropValid}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          {props.children}
+        </ThemeProvider>
+      </StyleSheetManager>
     </StyledComponentsRegistry>
   );
 };
