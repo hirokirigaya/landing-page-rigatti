@@ -16,14 +16,14 @@ export const Header = styled.header`
     flex-direction: row;
   }
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     padding: 2.0833333333333335vw 2.56875vw 0 2.8645833333333335vw;
     gap: 0;
   }
 `;
 
 export const Logo = styled.img`
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     width: 9.947916666666666vw;
     height: 1.3020833333333333vw;
   }
@@ -44,11 +44,11 @@ export const LeftContent = styled.div`
     }
   }
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.md}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['2lg']}) {
     justify-content: flex-start;
     width: initial;
   }
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 6.547916666666667vw;
   }
 `;
@@ -57,7 +57,7 @@ export const Nav = styled.nav`
   display: none;
   align-items: center;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.md}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['2lg']}) {
     display: flex;
   }
 `;
@@ -67,7 +67,7 @@ export const ListNav = styled.ul`
   align-items: center;
   gap: 29px;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 2.03125vw;
   }
 `;
@@ -80,7 +80,7 @@ export const ItemList = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.sm};
   font-weight: 600;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     font-size: ${({ theme }) => theme.fontSizesVW.sm};
   }
 
@@ -93,7 +93,7 @@ export const ItemList = styled.li`
     right: -20px;
     opacity: 0.2;
 
-    @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
       width: 0.052083333333333336vw;
       height: 0.9375vw;
       right: -1.0416666666666667vw;
@@ -132,7 +132,7 @@ export const RightContent = styled.div`
       display: flex;
     }
 
-    @media (min-width: ${({ theme }) => theme.customBreakPoints.md}) {
+    @media (min-width: ${({ theme }) => theme.breakPoints['2lg']}) {
       display: none;
     }
   }
@@ -152,7 +152,7 @@ export const Hr = styled.hr`
   margin-right: 20.59px;
   opacity: 0.1;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     display: block;
     margin-right: 1.0723958333333334vw;
     margin-left: 0.5208333333333334vw;
@@ -171,7 +171,7 @@ export const BoxLocale = styled.div`
     text-align: right;
   }
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 0.10416666666666667vw;
   }
 `;
@@ -183,7 +183,7 @@ export const TitleHours = styled.p`
   font-weight: 700;
   white-space: nowrap;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     font-size: ${({ theme }) => theme.fontSizesVW.sm};
   }
 `;
@@ -197,7 +197,7 @@ export const Locale = styled.p`
   padding-right: 5px;
   white-space: nowrap;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     font-size: ${({ theme }) => theme.fontSizesVW.sm};
     padding-right: 0.2604166666666667vw;
   }
@@ -210,7 +210,7 @@ export const LinkIconWhatsapp = styled.a`
   gap: 21.46px;
   transition: all 0.2s ease-in-out;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 1.1177083333333333vw;
   }
 
@@ -224,7 +224,7 @@ export const IconWhatsapp = styled.img`
   height: 20px;
   cursor: pointer;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     width: 1.0416666666666667vw;
     height: 1.0416666666666667vw;
   }
@@ -239,7 +239,7 @@ export const TextWhatsapp = styled.p`
   display: none;
   white-space: nowrap;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     display: block;
     font-size: ${({ theme }) => theme.fontSizesVW.xl};
   }
@@ -268,7 +268,7 @@ export const ButtonMenu = styled.button`
     gap: 0;
   }
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.md}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['2lg']}) {
     display: none;
   }
 `;
@@ -326,7 +326,7 @@ export const NavMobile = styled.nav`
     left: 0;
   }
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.md}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['2lg']}) {
     display: none;
   }
 `;

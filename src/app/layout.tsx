@@ -15,10 +15,19 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-poppins',
+  style: ['normal', 'italic'],
 });
 
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
-const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat' });
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  style: ['normal', 'italic'],
+});
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  style: ['normal', 'italic'],
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

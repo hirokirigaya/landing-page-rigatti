@@ -1,5 +1,7 @@
 'use client';
 
+import ScheduleAppointmentButton from '@/components/reusables/Button/ContactButtons/ScheduleAppointmentButton';
+import WhatsappButton from '@/components/reusables/Button/ContactButtons/WhatsappButton';
 import ColorfulCard from '@/components/reusables/ColorfulCard';
 import Image from 'next/image';
 import * as Styled from './styles';
@@ -52,33 +54,13 @@ const FirstSectionHome = (): JSX.Element => {
           />
         </Styled.BoxCards>
         <Styled.BoxButtons>
-          <Styled.ContactButton className='button-whatsapp' title='Tirar dúvidas pelo WhatsApp'>
-            <Styled.IconWhatsapp
-              src={'/icons/whatsapp_white_icon.svg'}
-              alt='icone whatsapp'
-              title='icone whatsapp'
-            />
-            <span>Tirar dúvidas pelo WhatsApp</span>
-          </Styled.ContactButton>
-          <Styled.ContactButton
-            className='button-schedule-appointment'
-            variant={'secondary'}
-            title='Quero agendar uma consulta'
-          >
-            <Styled.IconBookMark
-              src={'/icons/material_bookmark_border_icon.svg'}
-              alt='icone marca página'
-              title='icone marca página'
-            />
-            <span>Quero agendar uma consulta</span>
-          </Styled.ContactButton>
+          <WhatsappButton />
+          <ScheduleAppointmentButton />
           <Styled.LinkStyled href='/' title='Acessar instagram da clínica Rigatti'>
             <Styled.IconInstagram
               src='/icons/instagram_icon.svg'
               alt='Icone Instagram'
               title='Icone do Instagram'
-              width={26}
-              height={26}
             />
           </Styled.LinkStyled>
         </Styled.BoxButtons>

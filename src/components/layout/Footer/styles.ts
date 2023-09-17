@@ -11,14 +11,14 @@ export const Footer = styled.footer`
   padding: 130px 16px 126px 16px;
   gap: 41.49px;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     padding: 6.770833333333333vw 0.8333333333333334vw 6.5625vw 0.8333333333333334vw;
     gap: 2.1609375vw;
   }
 `;
 
 export const Logo = styled.img`
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     width: 15.052083333333334vw;
     height: 3.6979166666666665vw;
   }
@@ -37,7 +37,7 @@ export const IconInstagram = styled.img`
   width: 26px;
   height: 26px;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     width: 1.3541666666666667vw;
     height: 1.3541666666666667vw;
   }
@@ -50,7 +50,7 @@ export const BoxContacts = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 0.3125vw;
   }
 `;
@@ -59,13 +59,13 @@ export const LinkContact = styled.a`
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   color: ${({ theme }) => theme.colors.text.tertiary};
-  font-size: ${({ theme }) => theme.customFontSizes.xl};
+  font-size: ${({ theme }) => theme.fontSizes['1xl']};
   line-height: 26px;
   font-weight: 500;
   text-align: center;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
-    font-size: ${({ theme }) => theme.customFontSizesVW.xl};
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
+    font-size: ${({ theme }) => theme.fontSizesVW['1xl']};
     line-height: 1.3541666666666667vw;
   }
 `;
@@ -78,7 +78,7 @@ export const Address = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.md};
   padding-top: 2px;
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     font-size: ${({ theme }) => theme.fontSizesVW.md};
     padding-top: 0.10416666666666667vw;
     line-height: 1.3541666666666667vw;
@@ -90,9 +90,9 @@ export const HoursOpen = styled.p`
   line-height: 26px;
   color: ${({ theme }) => theme.colors.text.tertiary};
   text-align: center;
-  font-size: ${({ theme }) => theme.customFontSizes.xs};
+  font-size: ${({ theme }) => theme.fontSizes['2xs']};
 
-  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     line-height: 1.3541666666666667vw;
   }
 `;
