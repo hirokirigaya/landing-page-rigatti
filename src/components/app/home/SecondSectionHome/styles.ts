@@ -171,6 +171,8 @@ export const ImageDiv = styled.div<IImageDiv>`
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.12);
 `;
 
+
+
 export const BoxRight = styled.div`
   display: flex;
   flex-direction: column;

@@ -15,17 +15,17 @@ const SecondSectionHome = (): JSX.Element => {
           className='logo'
         />
         <Styled.ImageDiv
-          src='/images/womem_smiling.png'
+          src='/images/home/second_section/womem_smiling.png'
           title='Mulher sorrindo'
           className='womem-smiling-1'
         />
         <Styled.ImageDiv
-          src='/images/child_smiling.png'
+          src='/images/home/second_section/child_smiling.png'
           title='Criança sorrindo'
           className='child-smiling'
         />
         <Styled.ImageDiv
-          src='/images/womem_smiling_2.png'
+          src='/images/home/second_section/womem_smiling_2.png'
           title='Mulher sorrindo'
           className='womem-smiling-2'
         />

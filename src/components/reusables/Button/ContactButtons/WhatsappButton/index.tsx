@@ -2,9 +2,17 @@
 
 import * as Styled from './styles';
 
-const WhatsappButton = () => {
+interface WhatsappButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+  className?: string;
+}
+
+const WhatsappButton = ({ className ,...props }: WhatsappButtonProps) => {
   return (
-    <Styled.ContactButton className='button-whatsapp' title='Tirar dúvidas pelo WhatsApp'>
+    <Styled.ContactButton
+      className={className ? `button-whatsapp ${className}` : 'button-whatsapp'}
+      title='Tirar dúvidas pelo WhatsApp'
+      {...props}
+    >
       <Styled.IconWhatsapp
         src={'/icons/whatsapp_white_icon.svg'}
         alt='icone whatsapp'

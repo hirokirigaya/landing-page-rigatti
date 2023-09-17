@@ -10,11 +10,13 @@ const theme = {
       tertiary: '#4D4739',
       quaternary: '#666666',
       quinary: '#202020',
+      senary: '#222222',
     },
     background: {
       primary: '#F4F4F4',
       secondary: '#202020',
       tertiary: '#ffffff',
+      quaternary: '#F9F9F9',
     },
     green: {
       50: '#E3F4DE',
