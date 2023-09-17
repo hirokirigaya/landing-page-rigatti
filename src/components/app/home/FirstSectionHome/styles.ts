@@ -25,7 +25,7 @@ export const ImageRigattiEmblem = styled.img`
 
 export const ImageWomem = styled.img`
   position: absolute;
-  right: 10%;
+  right: 12px;
   width: 480px;
   top: 30%;
   z-index: -1;
