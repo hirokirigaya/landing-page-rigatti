@@ -81,7 +81,7 @@ const Treatments = [
     description: 'Redução da gordura localizada e melhora da silhueta corporal.',
   },
 ];
-const ThirdSectionHome = () => {
+const ThirdSectionHome = (): JSX.Element => {
   return (
     <Styled.Container>
       <Styled.ContainerDepositions>
