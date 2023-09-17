@@ -1,6 +1,5 @@
 'use client';
-import { Typography } from '@/components/reusables/Typography/Typography';
-import Image from 'next/image';
+
 import * as Styled from './styles';
 
 const Footer = (): JSX.Element => {
@@ -12,12 +11,10 @@ const Footer = (): JSX.Element => {
         title='Logo da clínica Rigatti, com o texto "Desperte sua força real"'
       />
       <Styled.LinkStyled href='/' title='Acessar instagram da clínica Rigatti'>
-        <Image
+        <Styled.IconInstagram
           src='/icons/instagram_icon.svg'
           alt='Icone Instagram'
           title='Icone do Instagram'
-          width={26}
-          height={26}
         />
       </Styled.LinkStyled>
       <Styled.BoxContacts>

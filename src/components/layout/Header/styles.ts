@@ -14,11 +14,20 @@ export const Header = styled.header`
 
   @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
     flex-direction: row;
+  }
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    padding: 2.0833333333333335vw 2.56875vw 0 2.8645833333333335vw;
     gap: 0;
   }
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    width: 9.947916666666666vw;
+    height: 1.3020833333333333vw;
+  }
+`;
 
 export const LeftContent = styled.div`
   display: flex;
@@ -59,7 +68,7 @@ export const ListNav = styled.ul`
   gap: 29px;
 
   @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
-    gap: 39px;
+    gap: 2.03125vw;
   }
 `;
 
@@ -71,6 +80,10 @@ export const ItemList = styled.li`
   font-size: ${({ theme }) => theme.fontSizes.sm};
   font-weight: 600;
 
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    font-size: ${({ theme }) => theme.fontSizesVW.sm};
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -79,6 +92,12 @@ export const ItemList = styled.li`
     background: ${({ theme }) => theme.colors.text.tertiary};
     right: -20px;
     opacity: 0.2;
+
+    @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+      width: 0.052083333333333336vw;
+      height: 0.9375vw;
+      right: -1.0416666666666667vw;
+    }
   }
 
   &:last-child {
@@ -133,8 +152,12 @@ export const Hr = styled.hr`
   margin-right: 20.59px;
   opacity: 0.1;
 
-  @media (min-width: ${({ theme }) => theme.breakPoints['2xl']}) {
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
     display: block;
+    margin-right: 1.0723958333333334vw;
+    margin-left: 0.5208333333333334vw;
+    width: 21.458333333333332vw;
+    height: 0.15625vw;
   }
 `;
 
@@ -147,6 +170,10 @@ export const BoxLocale = styled.div`
   @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
     text-align: right;
   }
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    gap: 0.10416666666666667vw;
+  }
 `;
 
 export const TitleHours = styled.p`
@@ -155,16 +182,25 @@ export const TitleHours = styled.p`
   color: ${({ theme }) => theme.colors.text.quaternary};
   font-weight: 700;
   white-space: nowrap;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    font-size: ${({ theme }) => theme.fontSizesVW.sm};
+  }
 `;
 
 export const Locale = styled.p`
-  font-family:  ${({ theme }) => theme.fontFamily.montserrat};
+  font-family: ${({ theme }) => theme.fontFamily.montserrat};
   font-size: ${({ theme }) => theme.fontSizes.sm};
   color: ${({ theme }) => theme.colors.text.quaternary};
   font-style: italic;
   font-weight: 300;
   padding-right: 5px;
   white-space: nowrap;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    font-size: ${({ theme }) => theme.fontSizesVW.sm};
+    padding-right: 0.2604166666666667vw;
+  }
 `;
 
 export const LinkIconWhatsapp = styled.a`
@@ -173,6 +209,10 @@ export const LinkIconWhatsapp = styled.a`
   align-items: center;
   gap: 21.46px;
   transition: all 0.2s ease-in-out;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    gap: 1.1177083333333333vw;
+  }
 
   &:hover {
     filter: brightness(1.1);
@@ -183,10 +223,15 @@ export const IconWhatsapp = styled.img`
   width: 20px;
   height: 20px;
   cursor: pointer;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    width: 1.0416666666666667vw;
+    height: 1.0416666666666667vw;
+  }
 `;
 
 export const TextWhatsapp = styled.p`
-  font-family:  ${({ theme }) => theme.fontFamily.montserrat};
+  font-family: ${({ theme }) => theme.fontFamily.montserrat};
   font-size: ${({ theme }) => theme.fontSizes.xl};
   color: ${({ theme }) => theme.colors.text.quaternary};
   font-weight: 700;
@@ -194,8 +239,9 @@ export const TextWhatsapp = styled.p`
   display: none;
   white-space: nowrap;
 
-  @media (min-width: ${({ theme }) => theme.breakPoints['2xl']}) {
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
     display: block;
+    font-size: ${({ theme }) => theme.fontSizesVW.xl};
   }
 `;
 

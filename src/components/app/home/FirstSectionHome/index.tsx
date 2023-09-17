@@ -47,18 +47,16 @@ const FirstSectionHome = (): JSX.Element => {
             titleColor='#69516E'
             background='#EBE8F4'
             descriptionColor='#7e6483'
-            style={{ marginLeft: '6px' }}
+            style={{ marginLeft: '0.3125vw' }}
             className='card'
           />
         </Styled.BoxCards>
         <Styled.BoxButtons>
           <Styled.ContactButton className='button-whatsapp' title='Tirar dúvidas pelo WhatsApp'>
-            <Image
+            <Styled.IconWhatsapp
               src={'/icons/whatsapp_white_icon.svg'}
               alt='icone whatsapp'
               title='icone whatsapp'
-              width={22}
-              height={22}
             />
             <span>Tirar dúvidas pelo WhatsApp</span>
           </Styled.ContactButton>
@@ -67,17 +65,15 @@ const FirstSectionHome = (): JSX.Element => {
             variant={'secondary'}
             title='Quero agendar uma consulta'
           >
-            <Image
+            <Styled.IconBookMark
               src={'/icons/material_bookmark_border_icon.svg'}
               alt='icone marca página'
               title='icone marca página'
-              width={17}
-              height={21}
             />
             <span>Quero agendar uma consulta</span>
           </Styled.ContactButton>
           <Styled.LinkStyled href='/' title='Acessar instagram da clínica Rigatti'>
-            <Image
+            <Styled.IconInstagram
               src='/icons/instagram_icon.svg'
               alt='Icone Instagram'
               title='Icone do Instagram'

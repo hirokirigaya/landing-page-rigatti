@@ -10,7 +10,7 @@ export const Container = styled.section`
   padding-top: 67px;
   justify-content: center;
 
-  @media (min-width: ${({ theme }) => theme.breakPoints.xl}) {
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
     padding-left: 14.21875vw;
     justify-content: flex-start;
   }
@@ -21,6 +21,13 @@ export const ImageRigattiEmblem = styled.img`
   left: -206px;
   z-index: -1;
   top: 126.44px;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    left: -10.729166666666666vw;
+    top: 6.585416666666666vw;
+    width: 21.458333333333332vw;
+    height: 19.6875vw;
+  }
 `;
 
 export const ImageWomem = styled.img`
@@ -30,15 +37,10 @@ export const ImageWomem = styled.img`
   top: 30%;
   z-index: -1;
 
-  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
-    right: -10%;
-    width: 680px;
-    top: 0;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakPoints['3xl']}) {
-    right: 12px;
-    width: initial;
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    right: 0.625vw;
+    width: 44.322916666666664vw;
+    height: 48.854166666666664vw;
     top: 0;
   }
 `;
@@ -47,6 +49,10 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    gap: 2.0833333333333335vw;
+  }
 `;
 
 export const Title = styled.h1`
@@ -58,9 +64,11 @@ export const Title = styled.h1`
   font-weight: 400;
   letter-spacing: -1.5px;
 
-  @media (min-width: ${({ theme }) => theme.breakPoints.xl}) {
-    font-size: ${({ theme }) => theme.customFontSizes['6xl']};
-    line-height: 80px;
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    font-size: ${({ theme }) => theme.customFontSizesVW['6xl']};
+    line-height: 4.166666666666667vw;
+    letter-spacing: -0.078125vw;
+    max-width: 46.25vw;
   }
 `;
 
@@ -78,8 +86,13 @@ export const Description = styled.p`
     color: ${({ theme }) => theme.colors.text.secondary};
   }
 
-  @media (min-width: ${({ theme }) => theme.breakPoints.xl}) {
-    font-size: ${({ theme }) => theme.fontSizes.lg};
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    font-size: ${({ theme }) => theme.fontSizesVW.lg};
+    line-height: 1.5625vw;
+    letter-spacing: -0.018229166666666668vw;
+    max-width: 40.520833333333336vw;
+    padding-top: 0.2604166666666667vw;
+    margin-left: 0.2604166666666667vw;
   }
 `;
 
@@ -91,11 +104,19 @@ export const BoxCards = styled.div`
   flex-wrap: wrap;
   padding-top: 7px;
   margin-left: 5px;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    gap: 0.8333333333333334vw;
+    max-width: 53.385416666666664vw;
+    padding-top: 0.3645833333333333vw;
+    margin-left: 0.2604166666666667vw;
+  }
+
   .card {
     width: 100%;
 
-    @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
-      max-width: 329px;
+    @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+      max-width: 17.135416666666668vw;
     }
   }
 `;
@@ -109,10 +130,12 @@ export const BoxButtons = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    gap: 0.5208333333333334vw;
+    margin-left: 0.2604166666666667vw;
   }
 `;
 
@@ -126,6 +149,17 @@ export const ContactButton = styled(Button)`
     line-height: 22px;
     font-family: ${({ theme }) => theme.fontFamily.playfair};
     font-weight: 400;
+
+    @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+      line-height: 1.1458333333333333vw;
+      font-size: ${({ theme }) => theme.fontSizesVW.sm};
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    gap: 0.5208333333333334vw;
+    padding: 0.5208333333333334vw 1.1458333333333333vw;
+    border-radius: 0.5208333333333334vw;
   }
 
   &.button-schedule-appointment {
@@ -133,9 +167,10 @@ export const ContactButton = styled(Button)`
     padding-left: 25.78px;
     justify-content: center;
 
-    @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
-      max-width: 256px;
+    @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+      max-width: 13.333333333333334vw;
       justify-content: flex-start;
+      padding-left: 1.3427083333333334vw;
     }
   }
 
@@ -143,8 +178,8 @@ export const ContactButton = styled(Button)`
     width: 100%;
     justify-content: center;
 
-    @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
-      max-width: 258px;
+    @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+      max-width: 13.4375vw;
       justify-content: flex-start;
     }
   }
@@ -159,8 +194,38 @@ export const LinkStyled = styled(Link)`
     filter: brightness(1.1);
   }
 
-  @media (min-width: ${({ theme }) => theme.breakPoints.xl}) {
-    position: absolute;
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
     left: -10.520833333333334vw;
+    position: absolute;
+  }
+`;
+
+export const IconInstagram = styled.img`
+  width: 26px;
+  height: 26px;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    width: 1.3541666666666667vw;
+    height: 1.3541666666666667vw;
+  }
+`;
+
+export const IconBookMark = styled.img`
+  width: 17px;
+  height: 21px;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    width: 0.8854166666666666vw;
+    height: 1.09375vw;
+  }
+`;
+
+export const IconWhatsapp = styled.img`
+  width: 22px;
+  height: 22px;
+
+  @media (min-width: ${({ theme }) => theme.customBreakPoints.lg}) {
+    width: 1.1458333333333333vw;
+    height: 1.1458333333333333vw;
   }
 `;
