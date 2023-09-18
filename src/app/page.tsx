@@ -1,5 +1,6 @@
 'use client';
 
+import FifthSectionHome from '@/components/app/home/FifthSectionHome';
 import FirstSectionHome from '@/components/app/home/FirstSectionHome';
 import FourthSectionHome from '@/components/app/home/FourthSectionHome';
 import SecondSectionHome from '@/components/app/home/SecondSectionHome';
@@ -13,6 +14,7 @@ export default function Home() {
       <SecondSectionHome />
       <ThirdSectionHome />
       <FourthSectionHome />
+      <FifthSectionHome />
     </Styled.Main>
   );
 }

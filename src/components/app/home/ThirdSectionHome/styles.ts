@@ -234,6 +234,8 @@ export const ItemListTreatment = styled.li`
     width: 12.99px;
     height: 11.9px;
     background-image: url('/icons/rigatti_emblem_icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
 
     @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
       top: 0.20833333333333334vw;

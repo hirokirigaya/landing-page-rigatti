@@ -11,6 +11,7 @@ const theme = {
       quaternary: '#666666',
       quinary: '#202020',
       senary: '#222222',
+      septenary: '#F2EFE9',
     },
     background: {
       primary: '#F4F4F4',
