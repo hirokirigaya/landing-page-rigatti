@@ -3,7 +3,6 @@
 import ScheduleAppointmentButton from '@/components/reusables/Button/ContactButtons/ScheduleAppointmentButton';
 import WhatsappButton from '@/components/reusables/Button/ContactButtons/WhatsappButton';
 import ColorfulCard from '@/components/reusables/ColorfulCard';
-import Image from 'next/image';
 import * as Styled from './styles';
 
 const FirstSectionHome = (): JSX.Element => {

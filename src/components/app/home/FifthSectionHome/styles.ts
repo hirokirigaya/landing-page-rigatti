@@ -35,6 +35,7 @@ export const BoxIntroductionOfSymptoms = styled.div`
     position: absolute;
     left: 0;
     bottom: 0;
+    width: 100%;
 
     @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
       width: 36.979166666666664vw;

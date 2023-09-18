@@ -30,13 +30,14 @@ export const ImageRigattiEmblem = styled.img`
 `;
 
 export const ImageWomem = styled.img`
+  display: none;
   position: absolute;
   right: 12px;
   width: 480px;
-  top: 30%;
   z-index: -1;
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
+    display: block;
     right: 0.625vw;
     width: 44.322916666666664vw;
     height: 48.854166666666664vw;

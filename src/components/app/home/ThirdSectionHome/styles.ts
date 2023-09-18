@@ -110,6 +110,7 @@ export const BoxTreatments = styled.div`
   }
 
   .rigatti-emblem {
+    display: none;
     position: absolute;
     z-index: -1;
     right: -652px;
@@ -120,6 +121,7 @@ export const BoxTreatments = styled.div`
       top: -1.9270833333333333vw;
       width: 66.92708333333333vw;
       height: 61.354166666666664vw;
+      display: block;
     }
   }
 
