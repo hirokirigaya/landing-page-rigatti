@@ -5,12 +5,10 @@ import GlobalStyles from '@/styles/GlobalStyles';
 import { theme } from '@/styles/variables';
 import { StyleSheetManager, ThemeProvider } from 'styled-components';
 
-import isPropValid from '@emotion/is-prop-valid';
-
 const Providers = (props: React.PropsWithChildren) => {
   return (
     <StyledComponentsRegistry>
-      <StyleSheetManager shouldForwardProp={isPropValid}>
+      <StyleSheetManager>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
           {props.children}
