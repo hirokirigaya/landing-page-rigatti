@@ -12,12 +12,14 @@ const theme = {
       quinary: '#202020',
       senary: '#222222',
       septenary: '#F2EFE9',
+      octonary: '#f9f9f9',
     },
     background: {
       primary: '#F4F4F4',
       secondary: '#202020',
       tertiary: '#ffffff',
       quaternary: '#F9F9F9',
+      quinary: '#121212',
     },
     green: {
       50: '#E3F4DE',
@@ -37,6 +39,7 @@ const theme = {
     darkGray: {
       500: '#202020',
       600: '#222222',
+      700: '#121212',
     },
     burntYellow: {
       500: '#C3B48B',

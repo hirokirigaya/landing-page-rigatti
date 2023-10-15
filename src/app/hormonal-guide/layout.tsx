@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Clínica Rigatti',
+  title: 'Clínica Rigatti | Guia Hormonal',
   description:
     'Agende sua consulta com Dr. Rigatti. Especialista em emagrecimento saudável, e nutrição. A clínica Rigatti oferece planos de dieta personalizados, em nutrição e emagrecimento.',
 };
@@ -11,7 +11,7 @@ import { Poppins, Playfair_Display, Montserrat } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['100','200','300', '400', '500', '600', '700'],
   variable: '--font-poppins',
   style: ['normal', 'italic'],
 });
@@ -36,9 +36,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='theme-color' content='#fff' />
+        <meta name='theme-color' content='#121212' />
       </head>
-      <body>
+      <body style={{
+        backgroundColor: '#121212',
+      }}>
         <Providers>{children}</Providers>
       </body>
     </html>
