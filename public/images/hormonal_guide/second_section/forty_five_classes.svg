@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="138.383" height="153.739" viewBox="0 0 138.383 153.739">
+  <g id="_45_Aulas" data-name="45 Aulas" transform="translate(-1081 -1723.828)">
+    <path id="Icon_feather-hexagon" data-name="Icon feather-hexagon" d="M139.883,108.285V48.115A15.042,15.042,0,0,0,132.362,35.1L79.713,5.018a15.043,15.043,0,0,0-15.043,0L12.021,35.1A15.043,15.043,0,0,0,4.5,48.115v60.17A15.043,15.043,0,0,0,12.021,121.3L64.67,151.382a15.042,15.042,0,0,0,15.043,0L132.362,121.3a15.043,15.043,0,0,0,7.521-13.012Z" transform="translate(1078 1722.497)" fill="none" stroke="#f1f1f1" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Icon_feather-hexagon-2" data-name="Icon feather-hexagon" d="M120.712,93.377V41.727a12.912,12.912,0,0,0-6.456-11.169L69.062,4.733a12.912,12.912,0,0,0-12.912,0L10.956,30.558A12.912,12.912,0,0,0,4.5,41.727v51.65a12.912,12.912,0,0,0,6.456,11.169L56.15,130.371a12.912,12.912,0,0,0,12.912,0l45.193-25.825a12.912,12.912,0,0,0,6.456-11.169Z" transform="translate(1087 1732.497)" fill="none" stroke="#f1f1f1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" opacity="0.2"/>
+    <text id="_45" data-name="45" transform="translate(1150 1804)" fill="#f1f1f1" font-size="50" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.05em"><tspan x="-30.85" y="0">45</tspan></text>
+    <text id="Aulas" transform="translate(1150 1830)" fill="#f1f1f1" font-size="16" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-28.408" y="0">AULAS</tspan></text>
+  </g>
+</svg>

@@ -159,7 +159,7 @@ export const Title = styled.h1`
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     max-width: 36.145833333333336vw;
-    font-size: ${({ theme }) => theme.fontSizesVW['5.1xl']};
+    font-size: ${({ theme }) => theme.fontSizesVW['5.2xl']};
     letter-spacing: -0.05989583333333333vw;
   }
 
