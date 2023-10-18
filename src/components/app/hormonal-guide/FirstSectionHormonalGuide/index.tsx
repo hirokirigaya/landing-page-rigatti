@@ -72,6 +72,7 @@ export const FirstSectionHormonalGuide = (): JSX.Element => {
           </Styled.BoxButtons>
           <Styled.BoxCards>
             <BlackCardWithTopRightIcon
+              className='card'
               icon={
                 <Styled.IconCard
                   src='/icons/ionic_medical_icon.svg'
@@ -94,6 +95,7 @@ export const FirstSectionHormonalGuide = (): JSX.Element => {
               }
             />
             <BlackCardWithTopRightIcon
+              className='card'
               icon={
                 <Styled.IconCard
                   src='/icons/expand_arrows_icon.svg'
@@ -116,7 +118,7 @@ export const FirstSectionHormonalGuide = (): JSX.Element => {
               }
             />
             <BlackCardWithTopRightIcon
-              className='card-3'
+              className='card card-3'
               icon={
                 <Styled.IconCard
                   src='/icons/life_ring_icon.svg'
@@ -140,6 +142,24 @@ export const FirstSectionHormonalGuide = (): JSX.Element => {
               }
             />
           </Styled.BoxCards>
+          <Styled.BoxGlassEffectMobile>
+            <Styled.BoxContentGlassEffect>
+              <Styled.TypographyBoxGlassEffect borderBottom>
+                Para você que fez vários cursos e ainda tem dúvidas.
+              </Styled.TypographyBoxGlassEffect>
+              <Styled.TypographyBoxGlassEffect borderBottom>
+                Para você que consulta seus colegas e não acha respostas.
+              </Styled.TypographyBoxGlassEffect>
+              <Styled.TypographyBoxGlassEffect>
+                Nenhum outro curso é tão completo, nenhuma outra mentoria será necessária.
+              </Styled.TypographyBoxGlassEffect>
+            </Styled.BoxContentGlassEffect>
+            <Styled.EmblemRigattiIcon
+              src='/rigatti_emblem_white.svg'
+              alt='Emblema Dr. Rigatti'
+              title='Emblema Dr. Rigatti'
+            />
+          </Styled.BoxGlassEffectMobile>
         </Styled.BoxTextAndButtons>
       </Styled.BoxContent>
     </Styled.Container>
