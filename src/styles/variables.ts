@@ -21,6 +21,7 @@ const theme = {
       tertiary: '#ffffff',
       quaternary: '#F9F9F9',
       quinary: '#121212',
+      senary: '#f1f1f1',
     },
     green: {
       50: '#E3F4DE',
