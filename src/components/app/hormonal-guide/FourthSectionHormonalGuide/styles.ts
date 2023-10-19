@@ -2,13 +2,19 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
   display: flex;
-  padding: 0 39px 0 150px;
+  padding: 0 20px 0 20px;
   margin-top: 204px;
   position: relative;
+  flex-direction: column;
+
+  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
+    padding: 0 55px 0 55px;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     padding: 0 2.03125vw 0 7.8125vw;
     margin-top: 10.625vw;
+    flex-direction: row;
   }
 `;
 
@@ -34,9 +40,14 @@ export const DrRigattiImage = styled.img`
   top: -155px;
   width: 725px;
   height: 906px;
+  opacity: 0.7;
+
+  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
+    opacity: 1;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
-    right: -9.84375vw;
+    right: -11.666666666666666vw;
     top: -8.072916666666666vw;
     width: 37.760416666666664vw;
     height: 47.1875vw;
@@ -53,15 +64,16 @@ export const DrRigattiLogoCircularImage = styled.img`
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     width: 8.786979166666667vw;
     height: 9.040625vw;
-    right: 4.6875vw;
-    top: 32.604166666666664vw;
+    right: 2.8645833333333335vw;
+    top: 32.65625vw;
   }
 `;
 
 export const LeftContent = styled.div`
   display: flex;
-  flex-direction: column;
   gap: 49.5px;
+  flex-direction: column;
+  z-index: 1;
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 2.578125vw;
@@ -83,8 +95,12 @@ export const TitleSaveTenYearsOfStudy = styled.h3`
   color: ${({ theme }) => theme.colors.text.nonary};
   line-height: 46px;
   letter-spacing: -0.7px;
-  width: 437px;
   font-weight: 300;
+  text-align: center;
+
+  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
+    text-align: left;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     line-height: 2.3958333333333335vw;
@@ -111,7 +127,11 @@ export const DescriptionSaveTenYearsOfStudy = styled.p`
   color: ${({ theme }) => theme.colors.text.nonary};
   line-height: 24px;
   letter-spacing: -0.29px;
-  width: 361px;
+  text-align: center;
+
+  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
+    text-align: left;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     font-size: ${({ theme }) => theme.fontSizesVW.sm};
@@ -130,9 +150,11 @@ export const BoxButtons = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: -11px;
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 0.5208333333333334vw;
+    margin-top: -0.5729166666666666vw;
   }
 `;
 
@@ -151,7 +173,7 @@ export const BoxRigattiAndButton = styled.div`
 export const BoxRigatti = styled.div`
   display: flex;
   flex-direction: column;
-  width: 358px;
+  width: 100%;
   height: 878px;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.default.black};
@@ -164,18 +186,21 @@ export const BoxRigatti = styled.div`
 `;
 
 export const BoxImageRigatti = styled.div`
+  display: flex;
+  justify-content: center;
   position: relative;
-  width: 358px;
+  width: 100%;
   height: 450px;
+  background: ${({ theme }) => theme.colors.burntYellow[500]};
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
+    display: block;
     width: 18.645833333333332vw;
     height: 23.4375vw;
   }
 `;
 export const RigattiImage = styled.img`
   position: absolute;
-  left: -30px;
   width: 418px;
   height: 597px;
   top: -109px;
@@ -190,7 +215,6 @@ export const RigattiImage = styled.img`
 
 export const RigattiMethodImage = styled.img`
   position: absolute;
-  left: -72px;
   bottom: 34px;
   width: 87.83px;
   height: 89.94px;
@@ -260,6 +284,7 @@ export const RightContent = styled.div`
   width: 100%;
   padding-top: 115px;
   margin-left: -6px;
+  position: relative;
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 2.34375vw;
@@ -272,16 +297,23 @@ export const BoxGlassEffect = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  width: 968px;
-  height: 69px;
+  min-height: 69px;
   background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(8px);
   border-radius: 20px;
-  padding: 23px 0 24px 24px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
+    flex-direction: row;
+    gap: 0;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     width: 50.416666666666664vw;
     height: 3.59375vw;
+    min-height: initial;
     border-radius: 1.0416666666666667vw;
     padding: 1.1979166666666667vw 0 1.25vw 1.25vw;
   }
@@ -294,8 +326,11 @@ export const TitleBoxGlassEffect = styled.h3`
   letter-spacing: -0.2px;
   color: ${({ theme }) => theme.colors.text.secondary};
   font-weight: 400;
-  position: absolute;
-  top: -15px;
+
+  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
+    position: absolute;
+    top: -15px;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     font-size: ${({ theme }) => theme.fontSizesVW.xl};
@@ -305,12 +340,16 @@ export const TitleBoxGlassEffect = styled.h3`
   }
 `;
 
-export const DescriptionGlassEffect = styled.div`
-  font-size: ${({ theme }) => theme.fontSizes.md};
+export const DescriptionGlassEffect = styled.p`
+  font-size: ${({ theme }) => theme.fontSizes.sm};
   line-height: 20px;
   letter-spacing: 0.075px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.text.octonary};
+
+  @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
+    font-size: ${({ theme }) => theme.fontSizes.md};
+  }
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     font-size: ${({ theme }) => theme.fontSizesVW.md};
@@ -336,8 +375,10 @@ export const BoxCardsDesktop = styled.div`
   display: flex;
   flex-direction: column;
   gap: 22px;
+  width: 100%;
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
+    width: initial;
     gap: 1.1458333333333333vw;
   }
 
@@ -351,7 +392,7 @@ export const BoxCardsDesktop = styled.div`
 
   .item-2 {
     .internal-item-2 {
-      padding: 20px 0 26px 20px;
+      padding: 20px 20 26px 20px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.0416666666666667vw 0 1.3541666666666667vw 1.0416666666666667vw;
@@ -381,7 +422,7 @@ export const BoxCardsDesktop = styled.div`
       }
     }
     .internal-item-3 {
-      padding: 20px 0 26px 24px;
+      padding: 20px 24px 26px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.0416666666666667vw 0 1.3541666666666667vw 1.25vw;
@@ -393,7 +434,7 @@ export const BoxCardsDesktop = styled.div`
   }
 
   .internal-item-4 {
-    padding: 24px 0px 22px 24px;
+    padding: 24px 24px 22px 24px;
 
     @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
       padding: 1.25vw 0px 1.1458333333333333vw 1.25vw;
@@ -425,7 +466,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-5 {
-      padding: 24px 0px 24px 24px;
+      padding: 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 1.25vw 1.25vw;
@@ -449,7 +490,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-6 {
-      padding: 24px 0px 20px 24px;
+      padding: 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 1.0416666666666667vw 1.25vw;
@@ -473,7 +514,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-7 {
-      padding: 24px 0px 30px 24px;
+      padding: 24px 24px 30px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 1.5625vw 1.25vw;
@@ -505,7 +546,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-8 {
-      padding: 26px 0px 44px 24px;
+      padding: 26px 24px 44px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.3541666666666667vw 0px 2.2916666666666665vw 1.25vw;
@@ -544,7 +585,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-9 {
-      padding: 24px 0px 44px 24px;
+      padding: 24px 24px 44px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 2.2916666666666665vw 1.25vw;
@@ -569,7 +610,7 @@ export const BoxCardsDesktop = styled.div`
 
   .item-10 {
     .internal-item-10 {
-      padding: 24px 0px 20px 24px;
+      padding: 24px 24px 20px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 1.0416666666666667vw 1.25vw;
@@ -593,7 +634,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-11 {
-      padding: 24px 0px 28px 24px;
+      padding: 24px 24px 28px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 1.4583333333333333vw 1.25vw;
@@ -625,7 +666,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-12 {
-      padding: 24px 0px 22px 24px;
+      padding: 24px 24px 22px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 1.1458333333333333vw 1.25vw;
@@ -657,7 +698,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-13 {
-      padding: 24px 0px 50px 24px;
+      padding: 24px 24px 50px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 2.6041666666666665vw 1.25vw;
@@ -688,7 +729,7 @@ export const BoxCardsDesktop = styled.div`
     }
 
     .internal-item-14 {
-      padding: 24px 0px 30px 24px;
+      padding: 24px 24px 30px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
         padding: 1.25vw 0px 1.5625vw 1.25vw;

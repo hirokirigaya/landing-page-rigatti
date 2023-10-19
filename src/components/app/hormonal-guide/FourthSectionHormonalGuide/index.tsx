@@ -5,12 +5,100 @@ import { listOfContents } from './MOCK';
 import { IWantToBeAHormonePrescriberButton } from '../Buttons/IWantToBeAHormonePrescriberButton';
 import { TalkToDrRigatttiWhatsappButton } from '../Buttons/TalkToDrRigatttiWhatsappButton';
 import { DarkCard } from './components/DarkCard';
+import { useEffect, useState } from 'react';
 
 export const FourthSectionHormonalGuide = (): JSX.Element => {
-  const list0to4 = listOfContents.slice(0, 4);
-  const list4to8 = listOfContents.slice(4, 8);
-  const list8to12 = listOfContents.slice(8, 12);
-  const list12to16 = listOfContents.slice(12, 16);
+  const copyList = listOfContents.map((item) => item);
+  const ordedList = copyList.sort((a, b) => a.id - b.id);
+
+  const [slices, setSlices] = useState<{
+    [x: string]: Array<{ id: number; title: string; items: string[] }>;
+  }>({
+    list0to4: listOfContents.slice(0, 4),
+    list4to8: listOfContents.slice(4, 8),
+    list8to12: listOfContents.slice(8, 12),
+    list12to16: listOfContents.slice(12, 16),
+  });
+
+  useEffect(() => {
+    const width = window.innerWidth;
+    if (width > 1168) {
+      setSlices({
+        list0to4: listOfContents.slice(0, 4),
+        list4to8: listOfContents.slice(4, 8),
+        list8to12: listOfContents.slice(8, 12),
+        list12to16: listOfContents.slice(12, 16),
+      });
+    }
+
+    if (width > 1040 && width < 1168) {
+      setSlices({
+        list0to4: ordedList.slice(0, 7),
+        list4to8: ordedList.slice(7, 10),
+        list8to12: ordedList.slice(10, 16),
+        list12to16: [],
+      });
+    }
+
+    if (width < 1040) {
+      setSlices({
+        list0to4: ordedList.slice(0, 8),
+        list4to8: ordedList.slice(8, 16),
+        list8to12: [],
+        list12to16: [],
+      });
+    }
+
+    if (width < 720) {
+      setSlices({
+        list0to4: ordedList,
+        list4to8: [],
+        list8to12: [],
+        list12to16: [],
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      let width = window.innerWidth;
+
+      if (width > 1168) {
+        setSlices({
+          list0to4: listOfContents.slice(0, 4),
+          list4to8: listOfContents.slice(4, 8),
+          list8to12: listOfContents.slice(8, 12),
+          list12to16: listOfContents.slice(12, 16),
+        });
+      }
+
+      if (width > 1040 && width < 1168) {
+        setSlices({
+          list0to4: ordedList.slice(0, 7),
+          list4to8: ordedList.slice(7, 10),
+          list8to12: ordedList.slice(10, 16),
+          list12to16: [],
+        });
+      }
+
+      if (width < 1040) {
+        setSlices({
+          list0to4: ordedList.slice(0, 8),
+          list4to8: ordedList.slice(8, 16),
+          list8to12: [],
+          list12to16: [],
+        });
+      }
+
+      if (width < 720) {
+        setSlices({
+          list0to4: ordedList,
+          list4to8: [],
+          list8to12: [],
+          list12to16: [],
+        });
+      }
+    });
+  }, []);
+
   return (
     <Styled.Container>
       <Styled.ManOnStoneImage
@@ -18,16 +106,7 @@ export const FourthSectionHormonalGuide = (): JSX.Element => {
         alt='Homem em pé sobre uma pedra com uma lanterna na mão'
         title='Homem em pé sobre uma pedra com uma lanterna na mão'
       />
-      <Styled.DrRigattiImage
-        src='/images/hormonal_guide/fourth_section/rigatti_doctor_with_hands_in_suit.png'
-        alt='Doutor Rigatti'
-        title='Doutor Rigatti'
-      />
-      <Styled.DrRigattiLogoCircularImage
-        src='/logo_dr_rigatti_circular.svg'
-        alt='Logo Dr. Rigatti'
-        title='Logo Dr. Rigatti'
-      />
+
       <Styled.LeftContent>
         <Styled.BoxTitleSaveTenYearsOfStudyAndDesc>
           <Styled.TitleSaveTenYearsOfStudy>
@@ -43,11 +122,11 @@ export const FourthSectionHormonalGuide = (): JSX.Element => {
             complicações, com a{' '}
             <span>segurança e experiência de quem já está a mais de 10 anos na área.</span>
           </Styled.DescriptionSaveTenYearsOfStudy>
+          <Styled.BoxButtons>
+            <IWantToBeAHormonePrescriberButton />
+            <TalkToDrRigatttiWhatsappButton />
+          </Styled.BoxButtons>
         </Styled.BoxTitleSaveTenYearsOfStudyAndDesc>
-        <Styled.BoxButtons>
-          <IWantToBeAHormonePrescriberButton />
-          <TalkToDrRigatttiWhatsappButton />
-        </Styled.BoxButtons>
         <Styled.BoxRigattiAndButton>
           <Styled.BoxRigatti>
             <Styled.BoxImageRigatti>
@@ -61,6 +140,7 @@ export const FourthSectionHormonalGuide = (): JSX.Element => {
                 src='/rigatti_method_circular.svg'
                 alt='Método Rigatti'
                 title='Método Rigatti'
+                draggable={false}
               />
             </Styled.BoxImageRigatti>
             <Styled.BoxContentRigatti>
@@ -81,6 +161,18 @@ export const FourthSectionHormonalGuide = (): JSX.Element => {
         </Styled.BoxRigattiAndButton>
       </Styled.LeftContent>
       <Styled.RightContent>
+        <Styled.DrRigattiImage
+          src='/images/hormonal_guide/fourth_section/rigatti_doctor_with_hands_in_suit.png'
+          alt='Doutor Rigatti'
+          title='Doutor Rigatti'
+          draggable={false}
+        />
+        <Styled.DrRigattiLogoCircularImage
+          src='/logo_dr_rigatti_circular.svg'
+          alt='Logo Dr. Rigatti'
+          title='Logo Dr. Rigatti'
+          draggable={false}
+        />
         <Styled.BoxGlassEffect>
           <Styled.TitleBoxGlassEffect>
             O que preparamos para você neste curso para médicos sobre hormônios.
@@ -91,70 +183,78 @@ export const FourthSectionHormonalGuide = (): JSX.Element => {
           </Styled.DescriptionGlassEffect>
         </Styled.BoxGlassEffect>
         <Styled.ContainerCards>
-          <Styled.BoxCardsDesktop>
-            {list0to4.map((item, index) => {
-              const light = index % 2 !== 0;
-              return (
-                <DarkCard
-                  className={`item-${item.id}`}
-                  key={item.id}
-                  number={String(item.id)}
-                  title={item.title}
-                  items={item.items}
-                  variant={light ? 'light' : 'dark'}
-                  internalClassName={`internal-item-${item.id}`}
-                />
-              );
-            })}
-          </Styled.BoxCardsDesktop>
-          <Styled.BoxCardsDesktop>
-            {list4to8.map((item, index) => {
-              const light = index % 2 === 0;
-              return (
-                <DarkCard
-                  className={`item-${item.id}`}
-                  key={item.id}
-                  number={String(item.id)}
-                  title={item.title}
-                  items={item.items}
-                  variant={light ? 'light' : 'dark'}
-                  internalClassName={`internal-item-${item.id}`}
-                />
-              );
-            })}
-          </Styled.BoxCardsDesktop>
-          <Styled.BoxCardsDesktop>
-            {list8to12.map((item, index) => {
-              const light = index % 2 !== 0;
-              return (
-                <DarkCard
-                  className={`item-${item.id}`}
-                  key={item.id}
-                  number={String(item.id)}
-                  title={item.title}
-                  items={item.items}
-                  variant={light ? 'light' : 'dark'}
-                  internalClassName={`internal-item-${item.id}`}
-                />
-              );
-            })}
-          </Styled.BoxCardsDesktop>
-          <Styled.BoxCardsDesktop className='last-list'>
-            {list12to16.map((item, index) => {
-              const light = index % 2 === 0;
-              return (
-                <DarkCard
-                  className={`item-${item.id}`}
-                  key={item.id}
-                  number={String(item.id)}
-                  title={item.title}
-                  items={item.items}
-                  variant={light ? 'light' : 'dark'}
-                  internalClassName={`internal-item-${item.id}`}
-                />
-              );
-            })}
-          </Styled.BoxCardsDesktop>
+          {slices.list0to4.length && (
+            <Styled.BoxCardsDesktop>
+              {slices.list0to4.map((item, index) => {
+                const light = index % 2 !== 0;
+                return (
+                  <DarkCard
+                    className={`item-${item.id}`}
+                    key={item.id}
+                    number={String(item.id)}
+                    title={item.title}
+                    items={item.items}
+                    variant={light ? 'light' : 'dark'}
+                    internalClassName={`internal-item-${item.id}`}
+                  />
+                );
+              })}
+            </Styled.BoxCardsDesktop>
+          )}
+          {slices.list4to8.length > 0 && (
+            <Styled.BoxCardsDesktop>
+              {slices.list4to8.map((item, index) => {
+                const light = index % 2 === 0;
+                return (
+                  <DarkCard
+                    className={`item-${item.id}`}
+                    key={item.id}
+                    number={String(item.id)}
+                    title={item.title}
+                    items={item.items}
+                    variant={light ? 'light' : 'dark'}
+                    internalClassName={`internal-item-${item.id}`}
+                  />
+                );
+              })}
+            </Styled.BoxCardsDesktop>
+          )}
+          {slices.list8to12.length > 0 && (
+            <Styled.BoxCardsDesktop>
+              {slices.list8to12.map((item, index) => {
+                const light = index % 2 !== 0;
+                return (
+                  <DarkCard
+                    className={`item-${item.id}`}
+                    key={item.id}
+                    number={String(item.id)}
+                    title={item.title}
+                    items={item.items}
+                    variant={light ? 'light' : 'dark'}
+                    internalClassName={`internal-item-${item.id}`}
+                  />
+                );
+              })}
+            </Styled.BoxCardsDesktop>
+          )}
+          {slices.list12to16.length > 0 && (
+            <Styled.BoxCardsDesktop className='last-list'>
+              {slices.list12to16.map((item, index) => {
+                const light = index % 2 === 0;
+                return (
+                  <DarkCard
+                    className={`item-${item.id}`}
+                    key={item.id}
+                    number={String(item.id)}
+                    title={item.title}
+                    items={item.items}
+                    variant={light ? 'light' : 'dark'}
+                    internalClassName={`internal-item-${item.id}`}
+                  />
+                );
+              })}
+            </Styled.BoxCardsDesktop>
+          )}
         </Styled.ContainerCards>
       </Styled.RightContent>
     </Styled.Container>

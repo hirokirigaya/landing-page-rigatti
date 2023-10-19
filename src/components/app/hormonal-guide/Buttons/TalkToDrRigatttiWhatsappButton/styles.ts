@@ -37,6 +37,11 @@ export const BoxButton = styled.button`
   background-color: transparent;
   border-radius: 6px;
   border: none;
+  transition: filter 0.2s ease-in-out;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
 
   @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
     width: 100%;

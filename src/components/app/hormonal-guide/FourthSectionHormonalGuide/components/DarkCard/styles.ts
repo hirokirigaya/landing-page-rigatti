@@ -6,7 +6,7 @@ interface ICard {
 
 export const Card = styled.div<ICard>`
   position: relative;
-  width: 316px;
+  width: 100%;
   background: ${({ variant }) =>
     variant === 'dark'
       ? 'rgba(0, 0, 0, 0.25)'
@@ -55,9 +55,11 @@ export const ContentCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 9px;
-  padding: 20px 0 10px 20px;
+  padding: 20px 20px 10px 20px;
+  width: 100%;
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
+    width: initial;
     gap: 0.46875vw;
     padding: 1.0416666666666667vw 0 0.5208333333333334vw 1.0416666666666667vw;
   }
@@ -82,7 +84,6 @@ export const ListOfItems = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none;
-  max-width: 279px;
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     max-width: 14.53125vw;
