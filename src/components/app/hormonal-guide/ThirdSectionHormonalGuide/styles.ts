@@ -15,7 +15,7 @@ export const Container = styled.section`
   }
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
-    padding-left: 0.5208333333333334vw;
+    padding-left: 1.6145833333333333vw;
     gap: 1.25vw;
     margin-top: 4.0625vw;
   }
@@ -36,10 +36,19 @@ export const Container = styled.section`
   .feedback-card-internal {
     &.one,
     &.four {
-      padding-bottom: 30px;
+      padding-bottom: 31px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
-        padding-bottom: 1.5625vw;
+        padding-bottom: 1.6145833333333333vw;
+      }
+    }
+
+    &.three,
+    &.two {
+      gap: 24px;
+
+      @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
+        gap: 1.25vw;
       }
     }
   }

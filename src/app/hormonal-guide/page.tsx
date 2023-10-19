@@ -1,6 +1,7 @@
 'use client';
 
 import { FirstSectionHormonalGuide } from '@/components/app/hormonal-guide/FirstSectionHormonalGuide';
+import { FourthSectionHormonalGuide } from '@/components/app/hormonal-guide/FourthSectionHormonalGuide';
 import { SecondSectionHormonalGuide } from '@/components/app/hormonal-guide/SecondSectionHormonalGuide';
 import { ThirdSectionHormonalGuide } from '@/components/app/hormonal-guide/ThirdSectionHormonalGuide';
 import DarkHeader from '@/components/layout/DarkHeader';
@@ -14,6 +15,7 @@ export default function HormonalGuide() {
         <FirstSectionHormonalGuide />
         <SecondSectionHormonalGuide />
         <ThirdSectionHormonalGuide />
+        <FourthSectionHormonalGuide />
       </MainContainer>
     </>
   );
