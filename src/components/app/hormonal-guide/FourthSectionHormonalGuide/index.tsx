@@ -53,8 +53,8 @@ export const FourthSectionHormonalGuide = (): JSX.Element => {
             <Styled.BoxImageRigatti>
               <Styled.RigattiImage
                 src='/images/hormonal_guide/fourth_section/doctor_rigatti_laughing.png'
-                alt='Doctor Rigatti'
-                title='Doctor Rigatti'
+                alt='Doutor Rigatti'
+                title='Doutor Rigatti'
                 draggable={false}
               />
               <Styled.RigattiMethodImage
