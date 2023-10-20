@@ -669,7 +669,7 @@ export const BoxCardsDesktop = styled.div`
       padding: 24px 24px 22px 24px;
 
       @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
-        padding: 1.25vw 0px 1.1458333333333333vw 1.25vw;
+        padding: 1.25vw 0px 1.7708333333333333vw 1.25vw;
       }
 
       .title {

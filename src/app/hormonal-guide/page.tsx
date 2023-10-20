@@ -1,5 +1,6 @@
 'use client';
 
+import { FifthSectionHormonalGuide } from '@/components/app/hormonal-guide/FifthSectionHormonalGuide';
 import { FirstSectionHormonalGuide } from '@/components/app/hormonal-guide/FirstSectionHormonalGuide';
 import { FourthSectionHormonalGuide } from '@/components/app/hormonal-guide/FourthSectionHormonalGuide';
 import { SecondSectionHormonalGuide } from '@/components/app/hormonal-guide/SecondSectionHormonalGuide';
@@ -16,6 +17,7 @@ export default function HormonalGuide() {
         <SecondSectionHormonalGuide />
         <ThirdSectionHormonalGuide />
         <FourthSectionHormonalGuide />
+        <FifthSectionHormonalGuide />
       </MainContainer>
     </>
   );
