@@ -28,7 +28,6 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.text.nonary};
   font-weight: 400;
   text-align: center;
-  margin-right: -16px;
 
   @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
     font-size: ${({ theme }) => theme.fontSizes['5xl']};

@@ -7,17 +7,17 @@ const NavLinks = [
   {
     title: 'Reposição Hormonal',
     accessibilityTitle: 'Clique para navegar até Reposição Hormonal',
-    href: '/',
+    href: '/hormonal-guide',
   },
   {
     title: 'Nutricionista',
     accessibilityTitle: 'Clique para navegar até Nutricionista',
-    href: '/',
+    href: '/hormonal-guide',
   },
   {
     title: 'Coleta e Exames',
     accessibilityTitle: 'Clique para navegar até Coleta e Exames',
-    href: '/',
+    href: '/hormonal-guide',
   },
 ];
 
