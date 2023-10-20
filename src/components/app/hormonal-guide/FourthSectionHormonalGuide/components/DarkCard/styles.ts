@@ -15,22 +15,22 @@ export const Card = styled.div<ICard>`
       : 'rgba(0, 0, 0, 0.25)'};
   backdrop-filter: blur(8px);
   border-radius: 20px;
-  box-shadow: ${({ variant }) =>
+  /* box-shadow: ${({ variant }) =>
     variant === 'dark'
       ? 'inset 0 10px 250px 0 rgba(0, 0, 0, 0.2)'
       : variant === 'light'
       ? '0 10px 250px 0 rgba(255, 255, 255, 0.02)'
-      : 'inset 0 10px 250px 0 rgba(0, 0, 0, 0.2)'};
+      : 'inset 0 10px 250px 0 rgba(0, 0, 0, 0.2)'}; */
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     width: 16.458333333333332vw;
     border-radius: 1.0416666666666667vw;
-    box-shadow: ${({ variant }) =>
+    /* box-shadow: ${({ variant }) =>
       variant === 'dark'
         ? 'inset 0 0.5208333333333334vw 13.020833333333334vw 0 rgba(0, 0, 0, 0.2)'
         : variant === 'light'
         ? '0 0.5208333333333334vw 13.020833333333334vw 0 rgba(255, 255, 255, 0.02)'
-        : 'inset 0 0.5208333333333334vw 13.020833333333334vw 0 rgba(0, 0, 0, 0.2)'};
+        : 'inset 0 0.5208333333333334vw 13.020833333333334vw 0 rgba(0, 0, 0, 0.2)'}; */
   }
 `;
 
