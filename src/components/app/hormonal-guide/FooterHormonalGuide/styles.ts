@@ -63,13 +63,15 @@ export const BoxButtons = styled.div`
   gap: 20px;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
 
   @media (min-width: ${({ theme }) => theme.breakPoints.md}) {
     flex-direction: row;
   }
-
+  
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
+    width: inherit;
     gap: 1.0416666666666667vw;
   }
 `;
