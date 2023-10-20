@@ -174,7 +174,7 @@ export const BoxRigatti = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 878px;
+  min-height: 878px;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.default.black};
 
@@ -182,6 +182,7 @@ export const BoxRigatti = styled.div`
     width: 18.645833333333332vw;
     height: 45.729166666666664vw;
     border-radius: 0.5208333333333334vw;
+    min-height: inherit;
   }
 `;
 
@@ -192,11 +193,14 @@ export const BoxImageRigatti = styled.div`
   width: 100%;
   height: 450px;
   background: ${({ theme }) => theme.colors.burntYellow[500]};
+  overflow-x: clip;
 
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     display: block;
     width: 18.645833333333332vw;
     height: 23.4375vw;
+    overflow-x: initial;
+
   }
 `;
 export const RigattiImage = styled.img`
