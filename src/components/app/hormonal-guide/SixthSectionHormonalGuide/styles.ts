@@ -16,7 +16,7 @@ export const Container = styled.section`
   @media (min-width: ${({ theme }) => theme.breakPoints['3lg']}) {
     gap: 4.427083333333333vw;
     margin-top: 10.416666666666666vw;
-    padding: 0 13.854166666666666vw 0 13.020833333333334vw;
+    padding: 0 13.90625vw;
   }
 `;
 

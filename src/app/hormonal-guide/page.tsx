@@ -2,6 +2,7 @@
 
 import { FifthSectionHormonalGuide } from '@/components/app/hormonal-guide/FifthSectionHormonalGuide';
 import { FirstSectionHormonalGuide } from '@/components/app/hormonal-guide/FirstSectionHormonalGuide';
+import { FooterHormonalGuide } from '@/components/app/hormonal-guide/FooterHormonalGuide';
 import { FourthSectionHormonalGuide } from '@/components/app/hormonal-guide/FourthSectionHormonalGuide';
 import { SecondSectionHormonalGuide } from '@/components/app/hormonal-guide/SecondSectionHormonalGuide';
 import { SixthSectionHormonalGuide } from '@/components/app/hormonal-guide/SixthSectionHormonalGuide';
@@ -21,6 +22,7 @@ export default function HormonalGuide() {
         <FifthSectionHormonalGuide />
         <SixthSectionHormonalGuide />
       </MainContainer>
+      <FooterHormonalGuide />
     </>
   );
 }
